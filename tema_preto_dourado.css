@@ -1,0 +1,192 @@
+/* Gerenciador de Fretes — tema preto e dourado
+   Somente aparência: não altera funções PHP, JavaScript ou arquivos JSON. */
+:root {
+    --fundo: #17191d;
+    --painel: #25272c;
+    --campo: #34363c;
+    --borda: #45474e;
+    --ouro: #d5a43b;
+    --ouro-claro: #edbd54;
+    --texto: #f5f5f5;
+    --secundario: #c1c3c9;
+}
+
+body,
+body.bg-light {
+    background: var(--fundo) !important;
+    color: var(--texto) !important;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container > h1,
+h1.text-primary,
+.text-primary {
+    color: var(--ouro) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--texto);
+}
+
+.card {
+    background: var(--painel);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.16);
+}
+
+.form-label, label {
+    color: var(--ouro);
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    background-color: var(--campo);
+    border: 1px solid #5b5e65;
+    color: var(--texto);
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--campo);
+    color: #fff;
+    border-color: var(--ouro);
+    box-shadow: 0 0 0 0.2rem rgba(213, 164, 59, 0.17);
+}
+
+.form-control::placeholder {
+    color: #b0b2b8;
+}
+
+.form-control:disabled,
+.form-select:disabled {
+    background: #292b30;
+    color: #a9abb2;
+}
+
+.form-select option {
+    background: var(--campo);
+    color: #fff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-primary,
+.btn-success,
+.btn-warning,
+.btn-info {
+    background: var(--ouro);
+    border-color: var(--ouro);
+    color: #17191d;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-warning:hover,
+.btn-info:hover {
+    background: var(--ouro-claro);
+    border-color: var(--ouro-claro);
+    color: #17191d;
+}
+
+.btn-secondary {
+    background: #44464b;
+    border-color: #55575e;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #595c63;
+    border-color: #686b73;
+    color: #fff;
+}
+
+/* Vermelho continua indicando a ação de remover. */
+.btn-danger {
+    background: #a83d43;
+    border-color: #a83d43;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #c44b52;
+    border-color: #c44b52;
+    color: #fff;
+}
+
+.table {
+    --bs-table-color: #f5f5f5;
+    --bs-table-bg: #25272c;
+    --bs-table-border-color: #4a4d54;
+    --bs-table-striped-color: #f5f5f5;
+    --bs-table-striped-bg: #2f3137;
+    --bs-table-hover-color: #ffffff;
+    --bs-table-hover-bg: #3b3d43;
+    color: var(--texto);
+}
+
+.table > thead > tr > th,
+.table > :not(caption) > * > th {
+    color: var(--ouro);
+}
+
+.table-dark {
+    --bs-table-bg: #202227;
+    --bs-table-color: #d5a43b;
+    --bs-table-border-color: #45474e;
+}
+
+.alert-info,
+.alert-success {
+    background: #2e322b;
+    border-color: #6f602f;
+    color: #f3dfb0;
+}
+
+.alert-warning {
+    background: #40351d;
+    border-color: #b78b31;
+    color: #ffdf9b;
+}
+
+.alert-danger {
+    background: #42292d;
+    border-color: #a83d43;
+    color: #ffe3e4;
+}
+
+hr {
+    border-color: #62646a;
+    opacity: 0.6;
+}
+
+a:not(.btn) {
+    color: var(--ouro);
+}
+
+a:not(.btn):hover {
+    color: var(--ouro-claro);
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+}
